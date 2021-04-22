@@ -1,6 +1,8 @@
 package maciek;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class main {
     public static void main(String args[]) {
@@ -67,6 +69,14 @@ public class main {
         System.out.println(Integer.BYTES); // 4
         System.out.println(Long.BYTES); // 8
         System.out.println(Double.BYTES); // 8
+
+        System.out.println("Negative elements + sum of positive");
+        int tab4[] = new int[]{33, -352, 225, -21, 434};
+        methods.showNegativeElemAmount(tab4);
+
+        methods.coinMachine(List.of(1, 2, 2, 2, 5));
+        System.out.println("---");
+        methods.coinMachine(List.of(2, 5, 1, 2, 5, 2, 2, 1, 1, 2, 5));
 
 //        String a = "Maciek";
 //        String b = "Maciek";

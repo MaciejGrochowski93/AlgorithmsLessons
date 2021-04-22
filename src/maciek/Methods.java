@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 public class Methods {
 
@@ -142,8 +143,8 @@ public class Methods {
             }
         }
 
-        for (int i = 0; i < matrix[0].length; i++){
-            if (matrix[0][i] == 0){
+        for (int i = 0; i < matrix[0].length; i++) {
+            if (matrix[0][i] == 0) {
                 columnZero = true;
                 break;
             }
@@ -153,42 +154,94 @@ public class Methods {
         // 0 4 0 3
         // 6 2 5 7
 
-        for (int i = 1; i < matrix.length; i++){
+        for (int i = 1; i < matrix.length; i++) {
             for (int j = 1; j < matrix[0].length; j++) {
-                if (matrix[i][j] == 0){
+                if (matrix[i][j] == 0) {
                     matrix[i][0] = 0;
                     matrix[0][j] = 0;
                 }
             }
         }
 
-        for (int i = 1; i < matrix.length; i++){
-            for (int j = 1; j < matrix[0].length; j++){
-                if (matrix[i][0] == 0 || matrix[0][j] == 0){
+        for (int i = 1; i < matrix.length; i++) {
+            for (int j = 1; j < matrix[0].length; j++) {
+                if (matrix[i][0] == 0 || matrix[0][j] == 0) {
                     matrix[i][j] = 0;
                 }
             }
         }
 
-        if (rowZero){
-            for (int i = 0; i < matrix[0].length; i++){
+        if (rowZero) {
+            for (int i = 0; i < matrix[0].length; i++) {
                 matrix[0][i] = 0;
             }
         }
 
-        if (columnZero){
-            for (int i = 0; i < matrix.length; i++){
+        if (columnZero) {
+            for (int i = 0; i < matrix.length; i++) {
                 matrix[i][0] = 0;
             }
         }
     }
 
-    public String reverseSentence(String word){
+    public String reverseSentence(String word) {
         String tmpString = "";
-        String [] actualValue = word.split(" ");
-        for (int i = actualValue.length - 1; i >= 0; i--){
+        String[] actualValue = word.split(" ");
+        for (int i = actualValue.length - 1; i >= 0; i--) {
             tmpString += actualValue[i] + " ";
-        } return tmpString;
+        }
+        return tmpString;
+    }
+
+    public void showNegativeElemAmount(int tab[]) {
+        ArrayList arrayList = new ArrayList();
+        int positiveNrSum = 0;
+        for (int i = 0; i < tab.length; i++) {
+            if (tab[i] < 0) {
+                arrayList.add(tab[i]);
+            } else if (tab[i] > 0){
+                positiveNrSum += tab[i];
+            }
+        }
+        System.out.println(arrayList);
+        System.out.println(positiveNrSum);
+    }
+
+    public void coinMachine(List<Integer> coins){
+        int count1PLN = 0;
+        int count2PLN = 0;
+        int count5PLN = 0;
+
+        for (int coin : coins){
+            if (coin == 1){
+                count1PLN++;
+                System.out.println("Not returning anything.");
+            }
+            else if (coin == 2){
+                count2PLN++;
+                if (count1PLN >= 1){
+                    count1PLN--;
+                    System.out.println("Returning 1 PLN.");
+                } else System.out.println("Not returning anything.");
+            }
+            else if (coin == 5){
+                count5PLN++;
+                if (count2PLN >= 2){
+                    count2PLN -= 2;
+                    System.out.println("Returning 2x 2 PLN.");
+                } else if (count2PLN >= 1 && count1PLN >= 2){
+                    count2PLN -= 1;
+                    count1PLN -= 2;
+                    System.out.println("Returning 1x 2 PLN & 2x 1 PLN.");
+                } else if (count1PLN >= 4){
+                    count1PLN -= 4;
+                } else System.out.println("Not returning anything.");
+            }
+        }
+        System.out.println("1 PLN amount = " + count1PLN);
+        System.out.println("2 PLN amount = " + count2PLN);
+        System.out.println("5 PLN amount = " + count5PLN);
+        System.out.println("Total PLN sum = " + (count1PLN * 1 + count2PLN * 2 + count5PLN * 5));
     }
 
 
