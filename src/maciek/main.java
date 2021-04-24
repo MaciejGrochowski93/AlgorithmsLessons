@@ -1,5 +1,7 @@
 package maciek;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -65,18 +67,22 @@ public class main {
 
         System.out.println(methods.reverseSentence("Do you want to build a snowman?"));
 
-        System.out.println(Character.BYTES); // 2
-        System.out.println(Integer.BYTES); // 4
-        System.out.println(Long.BYTES); // 8
-        System.out.println(Double.BYTES); // 8
+//        System.out.println(Character.BYTES); // 2
+//        System.out.println(Integer.BYTES); // 4
+//        System.out.println(Long.BYTES); // 8
+//        System.out.println(Double.BYTES); // 8
 
-        System.out.println("Negative elements + sum of positive");
-        int tab4[] = new int[]{33, -352, 225, -21, 434};
-        methods.showNegativeElemAmount(tab4);
+//        System.out.println(methods.StringChallenge("wwwwaaww"));
 
-        methods.coinMachine(List.of(1, 2, 2, 2, 5));
-        System.out.println("---");
-        methods.coinMachine(List.of(2, 5, 1, 2, 5, 2, 2, 1, 1, 2, 5));
+//        System.out.println("Negative elements + sum of positive");
+//        int tab4[] = new int[]{33, -352, 225, -21, 434};
+//        methods.showNegativeElemAmount(tab4);
+//
+//        methods.coinMachine(List.of(1, 2, 2, 2, 5));
+//        System.out.println("---");
+//        methods.coinMachine(List.of(2, 5, 1, 2, 5, 2, 2, 1, 1, 2, 5));
+//
+
 
 //        String a = "Maciek";
 //        String b = "Maciek";
@@ -92,18 +98,9 @@ public class main {
 //        System.out.println(methods.countUniqueChars("sarfojiagfegojiewgore"));
 //        System.out.println(methods.lengthOfLongestSubstring2("sarfojiagfegojiewgore"));
 
-
-//        System.out.println(methods.lengthOfLongSubstr("Maciek"));
-//        System.out.println(methods.lengthOfLongestSubstring2("Maciek"));
-//        System.out.println("--");
-//        System.out.println(methods.lengthOfLongSubstr("hahahahaha"));
-//        System.out.println(methods.lengthOfLongestSubstring2("hahahahaha"));
-//        System.out.println("--");
-//        System.out.println(methods.lengthOfLongestSubstring2("hdgfhdfhdgfhd"));
-//        System.out.println("--");
-//        System.out.println(methods.lengthOfLongSubstr("sarfojiagfegojiewgore"));
-//        System.out.println(methods.lengthOfLongestSubstring2("sarfojiagfegojiewgore"));
-//        System.out.println("--");
+        System.out.println(methods.isPalindrome(88988));
+        System.out.println(methods.palindromicNumberOf999());
+        methods.smallerModuloNr1to10();
     }
 }
 
