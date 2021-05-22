@@ -6,6 +6,33 @@ import java.util.List;
 
 public class Methods {
 
+    public void displayPrime(int number) {
+        int counter = 0;
+        for (int i = 2; i < 9999999; i++) {
+            if (isPrime(i)) {
+                counter++;
+            }
+            if (counter == number) {
+                System.out.println(number + " - " + i);
+                break;
+            }
+        }
+
+    }
+
+    public boolean isPrime(int number) {
+        int counter = 0;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                counter++;
+            }
+        }
+        if (counter == 0) {
+            return true;
+        }
+        return false;
+    }
+
     public void smallerModuloNr1to10() {
         for (long i = 1; i < 900000000; i++) {
             int counter = 0;
