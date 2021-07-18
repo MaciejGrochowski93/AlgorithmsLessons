@@ -1,10 +1,6 @@
 package maciek;
 
-import java.sql.Date;
-import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 public class main {
     public static void main(String args[]) {
@@ -102,8 +98,78 @@ public class main {
 //        System.out.println(methods.palindromicNumberOf999());
 //        methods.smallerModuloNr1to10();
 
-        methods.displayPrime(10001);
+//        methods.displayPrime(10001);
+//        methods.isPhytagorean(1000);
+//        methods.PythagoreanTripletSumToNumber(1000);
+//        methods.fiveDigitPrime34();
+
+//        methods.fibonacci1000(1000);
+//        double a = 5.3;
+//        int b = 33;
+//        a = b + a;
+//        System.out.println(a);
+//        // Słowo kluczowe continue pozwalaja na kontynuowanie pętli od następnej wartości z pominięciem kodu, który występuje w tej pętli za Continue.
+//        // Idea ich działania polega na umieszczeniu wszystkich obiektów w grafie, przejściu całego grafu i oznaczeniu obiektów, do których udało nam się dotrzeć.
+//
+//        String s = "fd";
+//        String s1 = "fgfg";
+//        String s2 = "gf";
+//        System.out.println(s1);
+//        System.out.println(s2);
+//
+//        System.out.println(s1.compareTo(s));
+//        System.out.println(s2.compareTo(s));
+//        System.out.println(s2.compareTo(s1));
+//        int x = 2;
+//        int y = x = 3;
+//        System.out.println(x);
+//        System.out.println(y);
+//
+//        System.out.println("---");
+//        byte c = 23;
+//        System.out.println(c);
+//
+//        double sa = 2;
+//        int se = 2;
+//        System.out.println(sa >= se);
+//
+//        try {
+//            System.out.println(5 / 0);
+//        }
+//        catch(Exception e) {
+//            System.err.println("gfgfg");
+//        }
+//        System.out.println(5/0);
+//
+//        System.out.println("hehe");
+//        System.out.println("hehe");
+//        System.out.println("hehe");
+//
+
+//        Scanner scanner = new Scanner(System.in);
+//        int scannerNumber;
+//        int tab[] = new int[5];
+//
+//        for (int i = 0; i < tab.length; i++) {
+//            System.out.println("Tell me number " + (i + 1));    // tablica liczy od 0, więc
+//            scannerNumber = scanner.nextInt();
+//            if (methods.isPrime(scannerNumber)) {
+//                tab[i] = scannerNumber;
+//            }
+//        }
+//        for (int i = 0; i < tab.length; i++) {
+//            if (tab[i] != 0) {
+//                System.out.println(tab[i]);
+//            }
+//        }
+
+        methods.showPowerfulDigitCounts();
+
+//        System.out.println(String.valueOf(Math.pow(2, 4)).length());
+//        System.out.println(Math.pow(7, 5));
+//        System.out.println(String.valueOf(Math.pow(7, 5)).length() - 2);
+//        System.out.println(Math.pow(2, 6));
+//        System.out.println(String.valueOf(Math.pow(2, 6)).length());
+
     }
 }
-
-

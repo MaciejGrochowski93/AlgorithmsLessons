@@ -6,6 +6,112 @@ import java.util.List;
 
 public class Methods {
 
+    public void showPowerfulDigitCounts() {
+        int counter = 0;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (String.valueOf(Math.pow(i, j)).length() == j + 2) {
+                    System.out.println(i + "^" + j + " = " + Math.pow(i, j));
+                    counter++;
+                }
+            }
+        }
+        System.out.println(counter);
+    }
+
+    public void fibonacci1000(long digits) {
+        long n1 = 0;
+        long n2 = 1;
+        for (long i = 1; i < 99999999999L; i++) {
+            long n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+
+            String tmpString = String.valueOf(n1);
+            if (tmpString.length() == digits) {
+                System.out.println(i);
+                break;
+            }
+        }
+    }
+
+    public void eightDigitPrime() {
+        int counter = 0;
+        for (int i = 56003; i <= 300000; i++) {
+            String tmpStr = String.valueOf(i);
+            char a = tmpStr.charAt(0);
+            char b = tmpStr.charAt(1);
+            char c = tmpStr.charAt(2);
+            char d = tmpStr.charAt(3);
+            char e = tmpStr.charAt(4);
+            char f = tmpStr.charAt(5);
+            if (e == '3' && c == d && isPrime(i)) {
+                counter++;
+                if (counter == 8) {
+                    System.out.println(tmpStr);
+                    break;
+                }
+            }
+        }
+    }
+
+    public void fiveDigitPrime34() {
+        int counter = 0;
+        for (int i = 56003; i <= 56993; i++) {
+            String tmpStr = String.valueOf(i);
+            char c = tmpStr.charAt(2);
+            char d = tmpStr.charAt(3);
+            char e = tmpStr.charAt(4);
+            if (e == '3' && c == d && isPrime(i)) {
+                System.out.println(tmpStr);
+                counter++;
+            }
+            ;
+        }
+        System.out.println(counter);
+    }
+
+    public void twoDigitPrime2() {
+        for (int i = 13; i <= 93; i++) {
+            String tmpStr = String.valueOf(i);
+            char c = tmpStr.charAt(1);
+            if (c == '3' && isPrime(i)) {
+                System.out.println(tmpStr);
+            }
+        }
+    }
+
+    public void PythagoreanTripletSumToNumber(int number) {
+        for (int i = 1; i < number / 2; i++) {
+            for (int j = 0; j < number / 2; j++) {
+                for (int k = 0; k < number / 2; k++) {
+                    if (i < j && j < k) {
+                        if (i * i + j * j == k * k && (i + j + k) == 1000) {
+                            System.out.println("i = " + i + ", j = " + j + ", k = " + k);
+                            System.out.println("i^2 = " + i * i + ", j^2 = " + j * j + ", k^2 = " + k * k);
+                            System.out.println("i * j * k = " + i * j * k);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void PythagoreanTriplet(int number) {
+        for (int i = 1; i < number / 2; i++) {
+            for (int j = 0; j < number / 2; j++) {
+                for (int k = 0; k < number / 2; k++) {
+                    if (i < j && j < k) {
+                        if (i * i + j * j == k * k) {
+                            System.out.println("i = " + i + ", j = " + j + ", k = " + k);
+                            System.out.println("i^2 = " + i * i + ", j^2 = " + j * j + ", k^2 = " + k * k);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public void displayPrime(int number) {
         int counter = 0;
         for (int i = 2; i < 9999999; i++) {
@@ -17,7 +123,6 @@ public class Methods {
                 break;
             }
         }
-
     }
 
     public boolean isPrime(int number) {
