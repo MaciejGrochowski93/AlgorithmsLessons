@@ -163,13 +163,57 @@ public class main {
 //            }
 //        }
 
-        methods.showPowerfulDigitCounts();
+//        methods.showPowerfulDigitCounts();
 
-//        System.out.println(String.valueOf(Math.pow(2, 4)).length());
-//        System.out.println(Math.pow(7, 5));
-//        System.out.println(String.valueOf(Math.pow(7, 5)).length() - 2);
-//        System.out.println(Math.pow(2, 6));
-//        System.out.println(String.valueOf(Math.pow(2, 6)).length());
+        methods.largest4NumbersMultiplier();
+
+//        int nineteen[] = new int[]{
+//                0,
+//                "one".length(),
+//                "three".length(),
+//                "four".length(),
+//                "five".length(),
+//                "six".length(),
+//                "seven".length(),
+//                "eight".length(),
+//                "nine".length(),
+//                "ten".length(),
+//                "eleven".length(),
+//                "twelve".length(),
+//                "thirteen".length(),
+//                "fourteen".length(),
+//                "fifteen".length(),
+//                "sixteen".length(),
+//                "seventeen".length(),
+//                "eighteen".length(),
+//                "nineteen".length()
+//        };
+//
+//        int tenMultiplies[] = new int[]{
+//                "twenty".length(),
+//                "thirty".length(),
+//                "fourty".length(),
+//                "fifty".length(),
+//                "sixty".length(),
+//                "seventy".length(),
+//                "eighty".length(),
+//                "ninety".length()
+//        };
+//
+//        int hundredMultiplier = "hundred".length() + "and".length();
+//
+//        int numberLengthCounter = 0;
+//        for (int i = 1; i <= 1000; i++) {
+//            if (i < 20) {
+//                numberLengthCounter += nineteen[i];
+//            }
+//            if (i < 100 && i > 19) {
+//                for (int TEN : tenMultiplies) {
+//                    numberLengthCounter += TEN;
+//                }
+//            }
+//
+//        }
 
     }
 }
