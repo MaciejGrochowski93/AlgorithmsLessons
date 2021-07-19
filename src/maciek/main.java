@@ -165,6 +165,13 @@ public class main {
 
 //        methods.showPowerfulDigitCounts();
 
+//        String numbersChain = "5678";
+//        int numbersArray[] = new int[4];
+//        for (int i = 0; i < numbersChain.length(); i++) {
+//            numbersArray[i] = numbersChain.charAt(i);
+//            System.out.println(numbersChain.charAt(i));
+//        }
+
         methods.largest4NumbersMultiplier();
 
 //        int nineteen[] = new int[]{
